@@ -103,7 +103,9 @@ ngrok http 5678
 ![Docker n8n Container](screenshots/ngrok_tunnel_status_n8n.png)
 
 ### n8n Editor Interface
-![n8n Editor UI](screenshots/n8n-editor-ui.png)
+![n8n Editor UI](screenshots/n8n_1.png)
+![n8n Editor UI](screenshots/n8n_2.png)
+![n8n Editor UI](screenshots/n8n_3.png)
 
 ---
 
