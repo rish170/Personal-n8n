@@ -1,0 +1,32 @@
+ngrok Setup for Remote Access
+
+ngrok is used to expose the locally running n8n instance
+to the public internet for remote access and webhook execution.
+
+Step 1: Install ngrok
+ngrok is installed on Windows using the Microsoft Store.
+
+Step 2: Authenticate ngrok
+The ngrok authtoken is added using the following command:
+
+ngrok config add-authtoken <YOUR_AUTH_TOKEN>
+
+(Note: The actual token is not committed to the repository for security reasons.)
+
+Step 3: Start HTTP Tunnel
+After the n8n container is running on port 5678, start ngrok with:
+
+ngrok http 5678
+
+Step 4: Public URL Generation
+ngrok generates a public HTTPS URL that forwards traffic
+to the local n8n server running at localhost:5678.
+
+This public URL is used as:
+- N8N_EDITOR_BASE_URL
+- WEBHOOK_URL
+
+Purpose:
+- Access n8n editor from any device
+- Enable webhook-based workflows
+- Allow remote automation execution while the local server is active

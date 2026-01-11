@@ -1,0 +1,30 @@
+Docker Run Command for n8n (Self-Hosted)
+
+This project runs n8n inside a Docker container using Docker Desktop on Windows.
+The container exposes n8n on port 5678 and persists workflow data on the host machine.
+
+Docker Image:
+n8nio/n8n:latest
+
+Host Port:
+5678
+
+Container Port:
+5678
+
+Volume Mapping:
+Host Path (Local Machine Folder)  ->  Container Path
+<local-folder-path>               ->  /home/node/.n8n
+
+The host folder stores n8n workflows, credentials, and configuration.
+Mapping it to /home/node/.n8n ensures data persistence inside the container.
+/home/node/.n8n is the default data directory used by n8n inside the container.
+
+Environment Variables Used:
+- N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE=true
+- N8N_EDITOR_BASE_URL=<public-ngrok-url>
+- WEBHOOK_URL=<public-ngrok-url>
+- N8N_DEFAULT_BINARY_DATA_MODE=filesystem
+
+The container is started from Docker Desktop with the above configuration
+using the GUI-based run options.
