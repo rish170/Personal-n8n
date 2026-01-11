@@ -1,9 +1,3 @@
-Got it 👍
-Below is **ONLY the README.md content**, clean and complete.
-You can **copy-paste this entire thing directly into `README.md`** on GitHub.
-
----
-
 # 🚀 Self-Hosted n8n Automation Server with Remote Access
 
 This project demonstrates the deployment of a **self-hosted n8n automation platform** using **Docker**, with secure remote access enabled via **ngrok**. The setup allows workflows and AI-driven automation pipelines to be accessed from anywhere while the local server is running.
